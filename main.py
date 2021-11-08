@@ -64,8 +64,8 @@ class Deck:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--players", help="Number of players to deal cards.", type=int)
-    parser.add_argument("--cards", help="Number of cards to deal per player", type=int)
+    parser.add_argument("players", metavar='PLAYERS', help="Number of players to deal cards.", type=int)
+    parser.add_argument("cards", metavar='CARDS', help="Number of cards to deal per player", type=int)
     args = parser.parse_args()
 
     if args.players * args.cards <= 52:
